@@ -10,7 +10,8 @@
 #import "SLNCard.h"
 
 @interface SLNViewController ()
-<UICollisionBehaviorDelegate>
+<UICollisionBehaviorDelegate,
+SLNCardDelegate>
 
 @property (strong, nonatomic) NSArray * colors;
 @property (strong, nonatomic) NSMutableArray * cards;
@@ -25,6 +26,16 @@
     UICollisionBehavior *_collision;
     UIAttachmentBehavior *_attachment;
     UIDynamicItemBehavior *_itemBehavior;
+}
+
+- (UIDynamicItemBehavior*)itemBehaviourForView:(UIView*)view {
+    for (UIDynamicItemBehavior* behaviour in _animator.behaviors) {
+        if (behaviour.class == [UIDynamicItemBehavior class]
+            && [behaviour.items firstObject] == view) {
+            return behaviour;
+        }
+    }
+    return nil;
 }
 
 - (NSArray *)colors{
@@ -166,16 +177,6 @@
     [behaviour addLinearVelocity:vel forItem:view];
 }
 
-- (UIDynamicItemBehavior*) itemBehaviourForView:(UIView*)view {
-    for (UIDynamicItemBehavior* behaviour in _animator.behaviors) {
-        if (behaviour.class == [UIDynamicItemBehavior class]
-            && [behaviour.items firstObject] == view) {
-            return behaviour;
-        }
-    }
-    return nil;
-}
-
 - (void)goBackWithCardView:(SLNCard *)card{
     [self.view sendSubviewToBack:card];
     
@@ -223,6 +224,22 @@
     
     [self.cards removeObject:card];
     [self.cards insertObject:card atIndex:0];
+}
+
+- (void)dynamicCard:(SLNCard *)card didBeginMoveWithPoint:(CGPoint)point{
+    
+}
+
+- (void)dynamicCard:(SLNCard *)card didMoveWithPoint:(CGPoint)point{
+    
+}
+
+- (void)dynamicCard:(SLNCard *)card didCancelMoveWithPoint:(CGPoint)point{
+    
+}
+
+- (void)dynamicCard:(SLNCard *)card didEndMoveWithVelocityPoint:(CGPoint)point{
+    
 }
 
 @end
