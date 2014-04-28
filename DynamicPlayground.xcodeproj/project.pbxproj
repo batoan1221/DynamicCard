@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B656A0091900308400A6B7E3 /* SLNCard.m in Sources */ = {isa = PBXBuildFile; fileRef = B656A0081900308400A6B7E3 /* SLNCard.m */; };
 		B67932EE18FED53E004350BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67932ED18FED53E004350BB /* Foundation.framework */; };
 		B67932F018FED53E004350BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67932EF18FED53E004350BB /* CoreGraphics.framework */; };
 		B67932F218FED53E004350BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67932F118FED53E004350BB /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B656A0071900308400A6B7E3 /* SLNCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNCard.h; sourceTree = "<group>"; };
+		B656A0081900308400A6B7E3 /* SLNCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLNCard.m; sourceTree = "<group>"; };
 		B67932EA18FED53E004350BB /* DynamicPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67932ED18FED53E004350BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B67932EF18FED53E004350BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +82,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B656A00318FFB0F800A6B7E3 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		B67932E118FED53E004350BB = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		B67932F318FED53E004350BB /* DynamicPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				B656A00318FFB0F800A6B7E3 /* iPad */,
 				B67932FC18FED53E004350BB /* SLNAppDelegate.h */,
 				B67932FD18FED53E004350BB /* SLNAppDelegate.m */,
 				B67932FF18FED53E004350BB /* Main.storyboard */,
@@ -119,6 +130,8 @@
 				B679330318FED53E004350BB /* SLNViewController.m */,
 				B679330518FED53E004350BB /* Images.xcassets */,
 				B67932F418FED53E004350BB /* Supporting Files */,
+				B656A0071900308400A6B7E3 /* SLNCard.h */,
+				B656A0081900308400A6B7E3 /* SLNCard.m */,
 			);
 			path = DynamicPlayground;
 			sourceTree = "<group>";
@@ -253,6 +266,7 @@
 				B679330418FED53E004350BB /* SLNViewController.m in Sources */,
 				B67932FE18FED53E004350BB /* SLNAppDelegate.m in Sources */,
 				B67932FA18FED53E004350BB /* main.m in Sources */,
+				B656A0091900308400A6B7E3 /* SLNCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +394,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DynamicPlayground/DynamicPlayground-Prefix.pch";
 				INFOPLIST_FILE = "DynamicPlayground/DynamicPlayground-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -393,7 +409,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DynamicPlayground/DynamicPlayground-Prefix.pch";
 				INFOPLIST_FILE = "DynamicPlayground/DynamicPlayground-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -457,6 +475,7 @@
 				B679331E18FED53E004350BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B679331F18FED53E004350BB /* Build configuration list for PBXNativeTarget "DynamicPlaygroundTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +484,7 @@
 				B679332118FED53E004350BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
